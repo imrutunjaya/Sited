@@ -1,0 +1,301 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Movie Streaming UI
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Custom scrollbar for vertical scroll containers */
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: rgba(255 255 255 / 0.2);
+      border-radius: 3px;
+    }
+  </style>
+ </head>
+ <body class="bg-[rgba(255,255,255,0.1)] min-h-screen flex justify-center items-center p-4">
+  <div class="relative max-w-[1200px] w-full rounded-3xl bg-[rgba(255,255,255,0.1)] backdrop-blur-[40px] border border-[rgba(255,255,255,0.15)] p-6 flex flex-col gap-6">
+   <!-- Top bar with browser controls and address -->
+   <div class="flex justify-center items-center gap-4 bg-[rgba(255,255,255,0.1)] rounded-xl py-2 px-4 max-w-[600px] mx-auto">
+    <div class="flex gap-2">
+     <div class="w-3 h-3 rounded-full bg-[#ff5f56]">
+     </div>
+     <div class="w-3 h-3 rounded-full bg-[#ffbd2e]">
+     </div>
+     <div class="w-3 h-3 rounded-full bg-[#27c93f]">
+     </div>
+    </div>
+    <div class="flex items-center gap-2 text-white/70 text-[13px] font-semibold font-mono select-none">
+     <i class="fas fa-lock">
+     </i>
+     <span>
+      https://movie.com
+     </span>
+    </div>
+    <div class="flex gap-3 text-white/70 text-[13px]">
+     <i class="fas fa-sync-alt cursor-pointer hover:text-white transition">
+     </i>
+     <i class="fas fa-plus cursor-pointer hover:text-white transition">
+     </i>
+    </div>
+   </div>
+   <!-- Main content container -->
+   <div class="flex gap-6">
+    <!-- Left sidebar -->
+    <div class="flex flex-col gap-6 w-[280px]">
+     <!-- Search input -->
+     <div>
+      <input class="w-full rounded-lg bg-[rgba(255,255,255,0.15)] placeholder-white/60 text-white py-3 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Search movies" type="text"/>
+     </div>
+     <!-- Navigation tabs -->
+     <nav class="flex gap-4 text-white/70 text-sm font-semibold select-none">
+      <button aria-current="page" class="px-3 py-1 rounded-lg bg-white/20 text-white transition">
+       Movies
+      </button>
+      <button class="px-3 py-1 rounded-lg hover:bg-white/10 transition">
+       TV Shows
+      </button>
+      <button class="px-3 py-1 rounded-lg hover:bg-white/10 transition">
+       Musics
+      </button>
+      <button class="px-3 py-1 rounded-lg hover:bg-white/10 transition">
+       Library
+      </button>
+      <button class="px-3 py-1 rounded-lg hover:bg-white/10 transition">
+       News
+      </button>
+     </nav>
+     <!-- New Trailer section -->
+     <section class="bg-[rgba(255,255,255,0.15)] rounded-xl p-4 flex flex-col gap-4">
+      <div class="flex justify-between items-center text-white/70 text-xs font-semibold">
+       <span>
+        New Trailer
+       </span>
+       <button class="text-white/50 hover:text-white transition text-xs font-semibold">
+        Today 9:00
+       </button>
+      </div>
+      <div class="flex flex-col gap-3">
+       <!-- Trailer item 1 -->
+       <div class="flex gap-3 bg-[rgba(255,255,255,0.1)] rounded-lg p-2 cursor-pointer hover:bg-[rgba(255,255,255,0.2)] transition">
+        <img alt="The Last Kingdom movie poster with three men in medieval armor" class="w-20 h-12 rounded-lg object-cover flex-shrink-0" height="50" src="https://storage.googleapis.com/a1aa/image/8c0ecb38-8098-40f0-6ac1-650bed89c9c0.jpg" width="80"/>
+        <div class="flex flex-col justify-center text-white text-xs font-semibold leading-tight">
+         <span>
+          The Last Kingdom: Seven
+         </span>
+         <span class="text-white/50 text-[10px] font-normal mt-1">
+          A Kings Must Die
+         </span>
+        </div>
+       </div>
+       <!-- Trailer item 2 -->
+       <div class="flex gap-3 bg-[rgba(255,255,255,0.1)] rounded-lg p-2 cursor-pointer hover:bg-[rgba(255,255,255,0.2)] transition">
+        <img alt="The Super Mario Movie poster with Mario and Luigi in colorful background" class="w-20 h-12 rounded-lg object-cover flex-shrink-0" height="50" src="https://storage.googleapis.com/a1aa/image/52950dda-77db-4a01-bad3-92f5018b1a39.jpg" width="80"/>
+        <div class="flex flex-col justify-center text-white text-xs font-semibold leading-tight">
+         <span>
+          The Super Mario Movie
+         </span>
+         <span class="text-white/50 text-[10px] font-normal mt-1">
+          2023
+         </span>
+        </div>
+       </div>
+       <!-- Trailer item 3 -->
+       <div class="flex gap-3 bg-[rgba(255,255,255,0.1)] rounded-lg p-2 cursor-pointer hover:bg-[rgba(255,255,255,0.2)] transition">
+        <img alt="Unknown movie poster with dark theme" class="w-20 h-12 rounded-lg object-cover flex-shrink-0" height="50" src="https://storage.googleapis.com/a1aa/image/b52770c0-86a0-4062-6301-ccc848946990.jpg" width="80"/>
+        <div class="flex flex-col justify-center text-white text-xs font-semibold leading-tight">
+         <span>
+          Unknown Movie
+         </span>
+         <span class="text-white/50 text-[10px] font-normal mt-1">
+          2023
+         </span>
+        </div>
+       </div>
+      </div>
+     </section>
+     <!-- Continue Watching section -->
+     <section class="bg-[rgba(255,255,255,0.15)] rounded-xl p-4 flex flex-col gap-4">
+      <h3 class="text-white/70 text-xs font-semibold">
+       Continue Watching
+      </h3>
+      <div class="flex flex-col gap-3">
+       <!-- Continue watching item 1 -->
+       <div class="flex items-center gap-3 cursor-pointer">
+        <img alt="Dark Series 1 poster with dark blue theme" class="w-10 h-10 rounded-lg object-cover flex-shrink-0" height="40" src="https://storage.googleapis.com/a1aa/image/8f25a215-0f4c-4790-8673-90df765d252c.jpg" width="40"/>
+        <div class="flex flex-col text-white text-xs font-semibold leading-tight">
+         <span>
+          Dark Series 1
+         </span>
+         <span class="text-white/50 text-[10px] font-normal mt-1">
+          Season 1
+         </span>
+        </div>
+       </div>
+       <!-- Continue watching item 2 -->
+       <div class="flex items-center gap-3 cursor-pointer">
+        <img alt="Dark Series 2 poster with dark blue theme" class="w-10 h-10 rounded-lg object-cover flex-shrink-0" height="40" src="https://storage.googleapis.com/a1aa/image/5350b532-123b-4b04-e350-0cc36389dfe9.jpg" width="40"/>
+        <div class="flex flex-col text-white text-xs font-semibold leading-tight">
+         <span>
+          Dark Series 2
+         </span>
+         <span class="text-white/50 text-[10px] font-normal mt-1">
+          Season 2
+         </span>
+        </div>
+       </div>
+       <!-- Continue watching item 3 -->
+       <div class="flex items-center gap-3 cursor-pointer">
+        <img alt="Avatar The Last Airbender poster with blue and orange theme" class="w-10 h-10 rounded-lg object-cover flex-shrink-0" height="40" src="https://storage.googleapis.com/a1aa/image/ea7b3b22-2e4b-4e86-52ed-e0459acf9dcf.jpg" width="40"/>
+        <div class="flex flex-col text-white text-xs font-semibold leading-tight">
+         <span>
+          Avatar The Last Airbender
+         </span>
+         <span class="text-white/50 text-[10px] font-normal mt-1">
+          Season 3
+         </span>
+        </div>
+       </div>
+      </div>
+     </section>
+    </div>
+    <!-- Main content right side -->
+    <div class="flex-1 flex flex-col gap-6">
+     <!-- Featured movie card -->
+     <div class="relative rounded-3xl overflow-hidden shadow-lg" style="min-height: 220px">
+      <img alt="Spider-Man: Across the Spider-Verse movie poster with Spider-Man in black and white symbiote suit swinging in city" class="w-full h-full object-cover" height="220" src="https://storage.googleapis.com/a1aa/image/fe947c31-a3fc-496b-6976-8544910fa50c.jpg" width="800"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent rounded-3xl p-6 flex flex-col justify-end">
+       <div class="text-xs text-white/70 font-semibold mb-1">
+        New Trending
+       </div>
+       <h2 class="text-white font-bold text-xl leading-tight max-w-[70%]">
+        Spider-Man:
+        <br/>
+        Across the Spider-Verse
+       </h2>
+       <p class="text-white/70 text-sm max-w-[70%] mt-1 leading-snug">
+        Miles Morales returns for an epic adventure in the Spider-Verse,
+              teaming up with Gwen Stacy and a new generation of Spider-People to
+              face a mysterious new threat.
+       </p>
+       <div class="mt-4 flex gap-4">
+        <button class="flex items-center gap-2 bg-white text-black rounded-full px-5 py-2 font-semibold text-sm hover:bg-white/90 transition">
+         <i class="fas fa-play">
+         </i>
+         Watch
+        </button>
+        <button class="flex items-center gap-2 border border-white text-white rounded-full px-5 py-2 font-semibold text-sm hover:bg-white/20 transition">
+         <i class="fas fa-download">
+         </i>
+         Download
+        </button>
+        <button aria-label="More options" class="flex items-center justify-center w-10 h-10 border border-white text-white rounded-full hover:bg-white/20 transition">
+         <i class="fas fa-ellipsis-h">
+         </i>
+        </button>
+       </div>
+      </div>
+     </div>
+     <!-- You might like section -->
+     <section>
+      <div class="flex justify-between items-center text-white/70 text-sm font-semibold mb-4 select-none">
+       <h3>
+        You might like
+       </h3>
+       <button class="text-white/50 hover:text-white transition text-xs font-semibold">
+        See all
+       </button>
+      </div>
+      <div class="flex gap-4 overflow-x-auto scrollbar-thin">
+       <!-- Card 1 -->
+       <div class="relative min-w-[160px] rounded-xl overflow-hidden cursor-pointer group">
+        <img alt="The Flash 2023 movie poster with red suit hero closeup" class="w-full h-[100px] object-cover rounded-xl" height="100" src="https://storage.googleapis.com/a1aa/image/7f6b1f25-0493-4541-12c7-96081e2bfba7.jpg" width="160"/>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+         The Flash (2023)
+        </div>
+        <button aria-label="Play The Flash" class="absolute bottom-3 right-3 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+         <i class="fas fa-play">
+         </i>
+        </button>
+       </div>
+       <!-- Card 2 -->
+       <div class="relative min-w-[160px] rounded-xl overflow-hidden cursor-pointer group">
+        <img alt="Manifest TV show poster with two men in dark background" class="w-full h-[100px] object-cover rounded-xl" height="100" src="https://storage.googleapis.com/a1aa/image/d4a8fc22-9dbc-4c23-4536-7fa1a3a67e64.jpg" width="160"/>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+         Manifest
+        </div>
+        <button aria-label="Play Manifest" class="absolute bottom-3 right-3 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+         <i class="fas fa-play">
+         </i>
+        </button>
+       </div>
+       <!-- Card 3 -->
+       <div class="relative min-w-[160px] rounded-xl overflow-hidden cursor-pointer group">
+        <img alt="Elemental movie poster with colorful cityscape and characters" class="w-full h-[100px] object-cover rounded-xl" height="100" src="https://storage.googleapis.com/a1aa/image/2690f924-c0d7-48b2-2dcc-19dcbbb7cfe0.jpg" width="160"/>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+         Elemental
+        </div>
+        <button aria-label="Play Elemental" class="absolute bottom-3 right-3 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+         <i class="fas fa-play">
+         </i>
+        </button>
+       </div>
+       <!-- Card 4 -->
+       <div class="relative min-w-[160px] rounded-xl overflow-hidden cursor-pointer group">
+        <img alt="Interstellar movie poster with astronaut in desert landscape" class="w-full h-[100px] object-cover rounded-xl" height="100" src="https://storage.googleapis.com/a1aa/image/260ca07c-009e-47ac-9fef-48f414ac01ea.jpg" width="160"/>
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-white text-xs font-semibold">
+         Interstellar
+        </div>
+        <button aria-label="Play Interstellar" class="absolute bottom-3 right-3 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+         <i class="fas fa-play">
+         </i>
+        </button>
+       </div>
+      </div>
+     </section>
+    </div>
+    <!-- Left vertical social icons -->
+    <div class="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col gap-6 text-white/70 text-xl select-none">
+     <button aria-label="Like" class="bg-[rgba(255,255,255,0.15)] rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+      <i class="fas fa-heart">
+      </i>
+     </button>
+     <button aria-label="Share" class="bg-[rgba(255,255,255,0.15)] rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+      <i class="fas fa-share-alt">
+      </i>
+     </button>
+     <button aria-label="Bookmark" class="bg-[rgba(255,255,255,0.15)] rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition">
+      <i class="fas fa-bookmark">
+      </i>
+     </button>
+    </div>
+   </div>
+   <!-- Top right user profile -->
+   <div class="absolute top-6 right-6 flex items-center gap-3 text-white text-sm font-semibold select-none">
+    <div class="flex items-center gap-2 cursor-pointer hover:text-white transition">
+     <img alt="User profile picture with short hair and glasses" class="w-8 h-8 rounded-full object-cover" height="32" src="https://storage.googleapis.com/a1aa/image/9e401ba4-0f3a-45de-fbfd-fb883f5f7cf5.jpg" width="32"/>
+     <span>
+      AC Johnson
+     </span>
+    </div>
+    <button aria-label="User menu" class="bg-[rgba(255,255,255,0.15)] rounded-full w-8 h-8 flex items-center justify-center hover:bg-white/20 transition">
+     <i class="fas fa-chevron-down">
+     </i>
+    </button>
+   </div>
+  </div>
+ </body>
+</html>
